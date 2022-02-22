@@ -9,15 +9,24 @@ module.exports = {
     path: path.join(__dirname, "/build"), // this specifies the name of the folder and its path
     filename: "index_bundle.js", // this specifies the file name in the folder
   },
+  devServer: {
+    port: 3010, // sets the port
+    // watchContentBase: true, // watch for changes
+  },
   //   modules is where we specify our loaders
   module: {
+    //   this rules identifies files and how to handle them
     rules: [
       {
-        test: /\.js$/, // this searches for any file that ends with the .js extension
+        test: /\.(js|jsx)$/, // this searches for any file that ends with the .js extension
         exclude: /node_modules/, // this excludes the node_modules folder from the search
         use: {
           loader: "babel-loader",
         },
+      },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },

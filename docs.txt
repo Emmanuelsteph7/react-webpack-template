@@ -28,3 +28,11 @@ steps
 * --hot --> hot reload, make it reload automatically on save
 8, add a build script
 - webpack --mode production
+
+Add Sass
+add the following dependencies
+"style-loader": "^3.3.1", (this will create a style tag in the html file and add the styles there)
+"css-loader": "^6.6.0", (this will load our css into the html document)
+"file-loader": "^6.2.0", (this resolves import/require on a file. like importing images etc)
+"sass-loader": "^12.6.0", (this and sass helps us convert our sass files into css)
+"sass": "^1.49.8",
