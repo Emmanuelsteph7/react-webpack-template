@@ -1,0 +1,30 @@
+Docs for this repo
+
+dependencies
+"react": "^17.0.2",
+"react-dom": "^17.0.2"
+
+dev dependencies
+"@babel/core": "^7.17.5",
+"@babel/preset-env": "^7.16.11",
+"@babel/preset-react": "^7.16.7",
+"babel-loader": "^8.2.3",
+"html-webpack-plugin": "^5.5.0",
+"webpack": "^5.69.1",
+"webpack-cli": "^4.9.2",
+"webpack-dev-server": "^4.7.4"
+
+steps
+1, created an index.js file in the src folder
+2, created a webpack.config.js file to house the webpack configurations
+3, add rules, plugins in the webpack config (check the config, there are notes there)
+4, create a .babelrc file and add its config
+5, add code to the index.js file in the src folder
+6, create an App.js file
+7, in the package json, add a start script with the following
+-webpack-dev-server --mode development --open --hot
+* --mode --> this specifies the mode to run in. in this case, development
+* --open --> opens the browser
+* --hot --> hot reload, make it reload automatically on save
+8, add a build script
+- webpack --mode production

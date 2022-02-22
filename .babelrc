@@ -1,0 +1,5 @@
+// babel compiles es6 syntax down for browsers
+
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
