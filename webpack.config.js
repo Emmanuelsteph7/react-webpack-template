@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // what webpack simply does is to bundle all our files into one js file
 module.exports = {
@@ -26,7 +27,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
     ],
   },
@@ -35,5 +36,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html", // this just tells the plugin to use this html file as a template for the built file
     }),
+    new MiniCssExtractPlugin(),
   ],
 };
